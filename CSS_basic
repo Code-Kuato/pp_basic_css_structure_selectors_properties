@@ -1,0 +1,83 @@
+/* CSS Flexbox Complete Guide */
+
+/* 1. Enable Flexbox */
+.container {
+  display: flex;
+}
+
+/* 2. Flex Direction (Main Axis) */
+.container {
+  flex-direction: row; /* Default: left to right */
+  flex-direction: row-reverse; /* Right to left */
+  flex-direction: column; /* Top to bottom */
+  flex-direction: column-reverse; /* Bottom to top */
+}
+
+/* 3. Justify Content (Main Axis Alignment) */
+.container {
+  justify-content: flex-start; /* Default, items start from left */
+  justify-content: flex-end; /* Items align at the end */
+  justify-content: center; /* Items align in the center */
+  justify-content: space-between; /* Items spread out, first and last at edges */
+  justify-content: space-around; /* Items have equal spacing around them */
+  justify-content: space-evenly; /* Equal space between items */
+}
+
+/* 4. Align Items (Cross Axis Alignment) */
+.container {
+  align-items: flex-start; /* Align items at the start */
+  align-items: flex-end; /* Align items at the end */
+  align-items: center; /* Center items */
+  align-items: baseline; /* Align based on text baseline */
+  align-items: stretch; /* Default, items stretch to fill the container */
+}
+
+/* 5. Flex Wrap (Handling Overflow) */
+.container {
+  flex-wrap: nowrap; /* Default, all items stay in one line */
+  flex-wrap: wrap; /* Items wrap to new lines if needed */
+  flex-wrap: wrap-reverse; /* Wrap but in reverse order */
+}
+
+/* 6. Align Content (Multiple Rows Alignment) */
+.container {
+  align-content: flex-start; /* Rows align at the start */
+  align-content: flex-end; /* Rows align at the end */
+  align-content: center; /* Rows align in the center */
+  align-content: space-between; /* Equal space between rows */
+  align-content: space-around; /* Equal space around rows */
+  align-content: space-evenly; /* Evenly spaced rows */
+}
+
+/* 7. Controlling Individual Items */
+.item {
+  flex-grow: 1; /* Item takes up available space */
+  flex-shrink: 2; /* Item shrinks twice as fast */
+  flex-basis: 100px; /* Item starts at 100px */
+  align-self: center; /* Override parent’s align-items */
+  order: -1; /* Move item to the beginning */
+}
+
+/* 8. Gap Between Items */
+.container {
+  gap: 10px; /* Adds space between flex items */
+}
+
+/* 9. Example Usage */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  text-align: center;
+  line-height: 100px;
+  font-size: 20px;
+}
